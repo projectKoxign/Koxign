@@ -31,7 +31,7 @@ public class LoginController {
 //
 //    @Autowired를 사용하여 의존성을 주입하면 스프링 컨테이너가 해당 타입의 빈을 찾아서 주입합니다. 
 //    이로써 LoginService 클래스의 메서드나 필드를 현재 클래스에서 사용할 수 있게 됩니다. 
-//    이것은 스프링의 IoC (Inversion of Control) 원칙을 따르는 방식 중 하나이며, 스프링 애플리케이션에서 의존성을 관리하는 데 도움이 됩니다..
+//    이것은 스프링의 IoC (Inversion of Control) 원칙을 따르는 방식 중 하나이며, 스프링 애플리케이션에서 의존성을 관리하는 데 도움이 됩니다.
 //    
     
     
