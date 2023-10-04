@@ -23,7 +23,7 @@
 					<input type="text" name="partnerNm" class="inp" id="partnerNm"/>
 				</div>
 				<div>
-					<label for="emailAdres">회사명</label>
+					<label for="partnerCo">회사명</label>
 					<input type="text" name="partnerco" class="inp" id="partnerco"/>
 				</div>
 				

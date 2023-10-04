@@ -11,8 +11,8 @@
 </head>
 <body>
 
-<h2 class="icon1">비밀번호 찾기</h2>
-<p class="mB20">회원가입 시 등록한 정보를 입력해주세요.</p>
+<h2>비밀번호 찾기</h2>
+<p>회원가입 시 등록한 정보를 입력해주세요.</p>
 
 <div class="bg-area change_box">
 	<form id="frm" name="frm" action="/partner/findPasswordRegist.do" method="post" onsubmit="return checkForm(this)" >
@@ -21,11 +21,11 @@
 			<div class="change_inp">
 				<div>
 					<label for="userNm">회원명</label>
-					<input type="text" name="partner_Nm" class="inp" id="partner_Nm"/>
+					<input type="text" name="partnerNm" class="inp" id="partnerNm"/>
 				</div>
 				<div>
-					<label for="partner_email">아이디</label>
-					<input type="text" name="partner_email" class="inp" id="partner_email"/>
+					<label for="partnerEmail">아이디</label>
+					<input type="text" name="partnerEmail" class="inp" id="partnerEmail"/>
 				</div>
 				
 			</div>
