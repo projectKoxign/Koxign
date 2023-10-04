@@ -20,11 +20,11 @@
 			<div class="change_inp">
 				<div>
 					<label for="userNm">회원명</label>
-					<input type="text" name="partner_Nm" class="inp" id="partner_Nm"/>
+					<input type="text" name="partnerNm" class="inp" id="partnerNm"/>
 				</div>
 				<div>
 					<label for="emailAdres">회사명</label>
-					<input type="text" name="partner_co" class="inp" id="partner_co"/>
+					<input type="text" name="partnerco" class="inp" id="partnerco"/>
 				</div>
 				
 			</div>

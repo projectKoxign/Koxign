@@ -3,50 +3,55 @@ package koxign.partner.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.ui.ModelMap;
 
-import koxign.partner.dao.PartnerDao;
+import koxign.partner.service.PartnerService;
 import koxign.partner.service.PartnerVO;
 
 @Service
-public class partnerServiceImpl {
+public class PartnerServiceImpl implements PartnerService {
+	
 	@Autowired
-	PartnerDao dao;
+	private PartnerMapper partenerMapper;
+	
+	@Autowired
+	private PasswordEncoder passwordEncoder;
 	
 	   //회원 ID찾기
 		public PartnerVO findpartnerEmail(PartnerVO vo) throws Exception{
-		   return memberMapper.findId(vo);
+		   return findpartnerEmail(vo);
 	   }
 	   
 	   //회원비밀번호 찾기
 		public PartnerVO findpartnerPwd(PartnerVO vo) throws Exception{
-		   return memberMapper.findPassword(vo);
+		   return findpartnerPwd(vo);
 	   }
 	   
 		//회원비밀번호업데이트
 		public void partnerPwdUpdate(PartnerVO vo) throws Exception{
 			//입력한 비밀번호를 암호화한다
-			String enpassword = EgovFileScrty.encryptPassword(vo.getPassword(),vo.getEmplyrId());
-			vo.setPassword(enpassword);
+			String encodedPassword = passwordEncoder.encode(vo.getPartnerPwd());			
+			vo.setPartnerPwd(encodedPassword);
 			
-			memberMapper.passwordUpdate(vo);
+			partnerPwdUpdate(vo);
 		}
 		
 		//회원목록
 		public List selectpartnerList(PartnerVO vo) throws Exception{
-			return memberMapper.selectMberList(vo);
+			return selectpartnerList(vo);
 		}
 		
 			
 		//회원목록 수
 		public int selectPartnerListCnt (PartnerVO vo) throws Exception{
-			return memberMapper.selectMberListCnt(vo);
+			return selectPartnerListCnt(vo);
 		}
 		
 		//회원상세
-		ModelMap selectpartner (PartnerVO vo) throws Exception{
-			return memberMapper.selectMber(vo);
+		public ModelMap selectpartner (PartnerVO vo) throws Exception{
+			return selectpartner(vo);
 		}
 
 }

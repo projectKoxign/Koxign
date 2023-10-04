@@ -5,19 +5,26 @@ import java.util.Date;
 public class PartnerVO {
 	//아이디
 	private String partnerEmail;
+	
 	//이름
 	private String partnerNm;
+	
 	//비밀번호
 	private String partnerPwd;
+	
 	//회사명
 	private String partnerCo;
+	
 	//사용자상태코드
 	private String partnerUseAt;
+	
 	//회원고유번호
 	private int partnerNo;
+	
 	//가입일자
 	private Date partnerCreatAt;
 	
+	//getter&setter
 	public String getPartnerEmail() {
 		return partnerEmail;
 	}
