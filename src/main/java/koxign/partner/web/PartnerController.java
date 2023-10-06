@@ -17,7 +17,8 @@ import koxign.partner.service.PartnerVO;
 
 
 @Controller
-@RequestMapping("/partner")
+@RequestMapping("/partner")//@RequestMapping다양한 유형(GET, POST, PUT, DELETE 등)의 HTTP 요청에 메서드를
+//매핑하는 데 사용할 수 있는 보다 일반적인 용도의 주석입니다.
 public class PartnerController {
 	final String path ="partner/";
 	
@@ -25,7 +26,8 @@ public class PartnerController {
 	PartnerService service;
 	
 	//회원 ID찾기
-	@GetMapping("/findId.do")
+	@GetMapping("/findId.do")//@GetMappingHTTP GET 요청을 컨트롤러의 특정 메서드에 매핑하는 데 사용됩니다.
+	//@RequestMapping(method = RequestMethod.GET), HTTP GET 요청만 명시적으로 처리한다는 의미입니다.
 	public String findId(@ModelAttribute("searchVO")PartnerVO vo, ModelMap model,
 			HttpSession session)throws Exception{
 		
@@ -36,6 +38,13 @@ public class PartnerController {
 	@GetMapping("/findIdComplete.do")
 	public String findIdComplete(@ModelAttribute("searchVO")PartnerVO vo, ModelMap model,
 			HttpSession session)throws Exception{
+		PartnerVO result = service.findpartnerEmail(vo);
+		if(result == null || result.getPartnerEmail().isEmpty()) {
+			model.addAttribute("message","가입괸 회원정보가 없습니다.");
+			
+			 return "forward:/partner/findId.do";
+		}
+		model.addAttribute("result",result);
 		
 		
 		return "/partner/FindIdComplete";

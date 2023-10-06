@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!-- koxign.login.service.impl.LoginMapper.xml -->
+<mapper namespace="koxign.partner.service.impl.PartnerServiceImpl">
+   
+<!--id와 비밀번호 찾기를 위한 resultMap  -->   
+   <resultMap id="findId" type="koxign/partner/service/PartnerVO">  
+   <result property="partnerEmail" column="partner_Email" />
+   <result property="partnerNo" column="partner_Nm" />
+   <result property="partnerNm" column="partner_Nm" />
+   </resultMap>
+   
+   <resultMap id="findPassword" type="koxign/partner/service/PartnerVO">  
+   <result property="partnerNo" column="partner_Nm" />
+   <result property="partnerEmail" column="partner_Email" />
+   <result property="partnerNm" column="partner_Nm" />
+   </resultMap>
+ 
+</mapper>
