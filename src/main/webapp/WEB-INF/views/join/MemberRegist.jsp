@@ -15,7 +15,7 @@
 </head>
 <body>
 <a href="/main" class="d-block auth-logo">
-   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="100"> <span class="logo-txt"></span>
+   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="80"> <span class="logo-txt"></span>
 </a>
 <h2 class="icon1">회원정보입력</h2>
 <p class="mB20">회원가입을 위해 아래의 정보를 입력해 주십시오. <br class="m-block"/><strong class="star">*</strong>표시는 필수 입력사항입니다.</p>

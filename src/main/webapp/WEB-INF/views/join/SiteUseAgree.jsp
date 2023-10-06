@@ -15,7 +15,7 @@
 </head>
 <body>
 <a href="/main" class="d-block auth-logo">
-   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="100"> <span class="logo-txt"></span>
+   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="80"> <span class="logo-txt"></span>
 </a>
 <h2 class ="icon1">약관동의</h2>
 
