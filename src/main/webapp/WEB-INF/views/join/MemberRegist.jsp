@@ -12,9 +12,6 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
 <title>회원가입</title>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-<link rel="stylesheet" href="/koxign/src/main/webapp/resources/JS/join.js">
-<link rel="stylesheet" href="/koxign/src/main/webapp/resources/SCSS/join.scss">
-<link rel="stylesheet" href="/koxign/src/main/webapp/resources/pug/join.pug">
 </head>
 <body>
 

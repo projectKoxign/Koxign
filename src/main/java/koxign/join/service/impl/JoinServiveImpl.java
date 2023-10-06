@@ -10,7 +10,7 @@ import koxign.join.service.JoinVO;
 public class JoinServiveImpl implements JoinService {
 
 	@Autowired
-	private JoinDao joinDao;
+	private JoinMapper joinDao;
 
 	//ID중복체크
 		public int duplicateCheck(JoinVO vo) throws Exception {

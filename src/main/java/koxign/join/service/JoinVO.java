@@ -2,36 +2,38 @@ package koxign.join.service;
 
 public class JoinVO {
 	//아이디
-		private String PartnerEmail;
+		private String partnerEmail;
 		
 		//이름
-		private String PartnerNm;
+		private String partnerNm;
 		
 		//비밀번호
-		private String PartnerPwd;
+		private String partnerPwd;
 
 		public String getPartnerEmail() {
-			return PartnerEmail;
+			return partnerEmail;
 		}
 
 		public void setPartnerEmail(String partnerEmail) {
-			PartnerEmail = partnerEmail;
+			this.partnerEmail = partnerEmail;
 		}
 
 		public String getPartnerNm() {
-			return PartnerNm;
+			return partnerNm;
 		}
 
 		public void setPartnerNm(String partnerNm) {
-			PartnerNm = partnerNm;
+			this.partnerNm = partnerNm;
 		}
 
 		public String getPartnerPwd() {
-			return PartnerPwd;
+			return partnerPwd;
 		}
 
 		public void setPartnerPwd(String partnerPwd) {
-			PartnerPwd = partnerPwd;
+			this.partnerPwd = partnerPwd;
 		}
+
+
 		
 }

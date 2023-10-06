@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import koxign.join.service.JoinVO;
 @Mapper
 @Repository
-public interface JoinDao {
+public interface JoinMapper {
 
 	//ID중복체크
 	int duplicateCheck(JoinVO vo) throws Exception;

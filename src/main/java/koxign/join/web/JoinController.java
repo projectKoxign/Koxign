@@ -24,17 +24,17 @@ public class JoinController {
 
 
 	//약관동의 
-	@RequestMapping(value = "/join/SiteUseAgree.do")
+	@RequestMapping(value = "join/siteUseAgree.do")
 	public String siteUseAgree(@ModelAttribute("searchVO") JoinVO vo, HttpServletRequest request, 
 		ModelMap model, HttpSession session) throws Exception{
 		return "join/SiteUseAgree";
 	}
 
 	//회원등록 폼
-	@RequestMapping(value = "/join/MemberRegist.do")
+	@RequestMapping(value = "/join/memberRegist.do")
 	public String memberResgit(@ModelAttribute("searchVO") JoinVO vo, HttpServletRequest request, 
 		ModelMap model, HttpSession session) throws Exception{
-		return "join/join";
+		return "/join/MemberRegist";
 	}
 	
 	//아이디 중복체크

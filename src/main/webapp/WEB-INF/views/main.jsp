@@ -9,6 +9,7 @@
 <body>
 <div>
 <a href="/main/login.do"> <button>로그인</button></a>
+<a href="/join/join.do"> <button>회원가입</button></a>
 </div>
 </body>
 </html>

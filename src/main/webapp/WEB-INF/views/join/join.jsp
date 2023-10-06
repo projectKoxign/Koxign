@@ -44,7 +44,7 @@
                                     <div class="auth-content my-auto">
                                         <div class="text-center">
                                             <h5 class="mb-0">Register Account</h5>
-                                            <p class="text-muted mt-2">Get your free Minia account now.</p>
+                                            <p class="text-muted mt-2">Get your account now.</p>
                                         </div>
                                         <form class="needs-validation mt-4 pt-2" novalidate action="index.html">
                                             <div class="mb-3">
@@ -74,7 +74,7 @@
                                                 <p class="mb-0">By registering you agree to the Minia <a href="#" class="text-primary">Terms of Use</a></p>
                                             </div>
                                             <div class="mb-3">
-                                                <button class="btn btn-primary w-100 waves-effect waves-light" type="submit">Register</button>
+                                                <a href="siteUseAgree.do" class="btn btn-primary w-100 waves-effect waves-light" >회원가입</a>
                                             </div>
                                         </form>
 
