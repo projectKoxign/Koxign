@@ -14,7 +14,9 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<a href="/main" class="d-block auth-logo">
+   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="100"> <span class="logo-txt"></span>
+</a>
 <h2 class ="icon1">약관동의</h2>
 
 <p>약관 및 개인정보 수집 · 이용 및 제3자 제공 동의에 대한 내용을 자세히 읽어 보신 후 동의 여부를 결정하여 주시기 바랍니다.</p>

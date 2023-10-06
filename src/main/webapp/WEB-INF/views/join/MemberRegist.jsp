@@ -14,7 +14,9 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<a href="/main" class="d-block auth-logo">
+   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="100"> <span class="logo-txt"></span>
+</a>
 <h2 class="icon1">회원정보입력</h2>
 <p class="mB20">회원가입을 위해 아래의 정보를 입력해 주십시오. <br class="m-block"/><strong class="star">*</strong>표시는 필수 입력사항입니다.</p>
 
@@ -23,58 +25,26 @@
 	<input type="hidden" id="idCheckAt" value="N"/>
 	
 	<table class="join_chart">
-		<caption>게시글 작성</caption>
+		
 		<colgroup>
 			<col style="width:200px"/>
 			<col/>
 		</colgroup>
 		<tbody>
 			<tr>
-				<th><strong class="star">*</strong><label for="emplyrId">회원아이디</label></th>
+				<th><strong class="star">*</strong><label for="partnerEmail">Email</label></th>
 				<td>
 					<input type="text" id="emplyrId" name="emplyrId" required/>
 					<a href="#" id="btn-id-check" class="btn-sm spot fn" title="중복확인(새창열림)"><span>중복확인</span></a>
 				</td>
 			</tr>
 			<tr>
-				<th><strong class="star">*</strong><label for="userNm">회원명</label></th>
+				<th><strong class="star">*</strong><label for="userNm">Username</label></th>
 				<td><input type="text" id="userNm" name="userNm" required/></td>
 			</tr>
 			<tr>
-				<th><strong class="star">*</strong><label for="password">비밀번호</label></th>
+				<th><strong class="star">*</strong><label for="password">Password</label></th>
 				<td><input type="password" id="password" name="password" required/></td>
-			</tr>
-			<tr>
-				<th><strong class="star">*</strong><label for="password2">비밀번호 확인</label></th>
-				<td><input type="password" id="password2" required/></td>
-			</tr>
-			<tr>
-				<th><strong class="star">*</strong><label for="passwordHint">비밀번호 힌트</label></th>
-				<td>
-					<select id="passwordHint" name="passwordHint" required>
-						<option value="1">취미 생활은?</option>
-						<option value="2">애완견 이름은?</option>
-						<option value="3">취직하고 싶은 곳은?</option>
-						<option value="4">여행가고 싶은 곳은?</option>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<th><strong class="star">*</strong><label for="passwordCnsr">비밀번호 정답</label></th>
-				<td><input type="text" id="passwordCnsr" name="passwordCnsr" required/></td>
-			</tr>
-			<tr>
-				<th><strong class="star">*</strong><label for="emailId">이메일</label></th>
-				<td>
-					<input type="text" id="emailId" name="emailId" required/>@<input type="text" id="emailDomain" name="emailDomain" required/>
-					<select id="domain">
-						<option value="">직접입력</option>
-						<option value="daum.net">다음</option>
-						<option value="naver.com">네이버</option>
-						<option value="gmail.com">구글(G메일)</option>
-						<option value="nate.com">네이트</option>
-					</select>
-				</td>
 			</tr>
 		</tbody>
 	</table>
@@ -137,18 +107,7 @@ function regist(){
 	}else if(!$("#password").val()){
 		alert("비밀번호를 입력해주세요.");
 		return false;
-	}else if(!$("#password2").val()){
-		alert("비밀번호를 확인해주세요.");
-		return false;
-	}else if(!$("#passwordHint").val()){
-		alert("비밀번호 힌트를 입력해주세요.");
-		return false;
-	}else if(!$("#passwordCnsr").val()){
-		alert("비밀번호 정답을 입력해주세요.");
-		return false;
-	}else if($("#password").val() != $("#password2").val()){
-		alert("비밀번호와 비밀번호 확인 정보가 다릅니다.");
-		return false;
+	
 	}
 	
 	if($("#password").val()){
@@ -180,7 +139,5 @@ function regist(){
 }
 
 </script>
-
-
 </body>
 </html>

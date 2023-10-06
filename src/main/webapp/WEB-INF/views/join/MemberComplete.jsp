@@ -14,7 +14,9 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 </head>
 <body>
-
+<a href="main.html" class="d-block auth-logo">
+   <img src="../resources/assets/img/koxign-logo.png" alt="koxign" height="200"> <span class="logo-txt"></span>
+</a>
 <h2 class="icon1">가입완료</h2>
 <p class="mB40">회원가입을 완료되었습니다. 감사합니다.</p>
 <div class="join_finish">

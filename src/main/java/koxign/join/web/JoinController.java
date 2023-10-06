@@ -31,7 +31,7 @@ public class JoinController {
 	}
 
 	//È¸¿øµî·Ï Æû
-	@RequestMapping(value = "/join/memberRegist.do")
+	@RequestMapping(value = "/join/MemberRegist.do")
 	public String memberResgit(@ModelAttribute("searchVO") JoinVO vo, HttpServletRequest request, 
 		ModelMap model, HttpSession session) throws Exception{
 		return "/join/MemberRegist";
