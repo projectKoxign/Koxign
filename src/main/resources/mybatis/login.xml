@@ -3,5 +3,16 @@
 
 <!-- koxign.login.service.impl.LoginMapper.xml -->
 <mapper namespace="koxign.login.service.impl.LoginMapper">
-    <!-- SQL 매핑 구성 -->
+   
+<!--로그인 처리를 위한 resultMap  -->   
+   <resultMap id="login" type="koxign/login/service/LoginVO">
+   
+   <result property="partnerEmail" column="partner_Email" />
+   <result property="partnerNm" column="partner_Nm" />
+   <result property="partnerPwd" column="partner_Pwd" />
+   <result property="partnerCo" column="partner_Co" />
+   <result property="partnerPhone" column="partner_Phone" />
+   <result property="partnerAddr" column="partner_Addrs" />
+   </resultMap>
+ 
 </mapper>
