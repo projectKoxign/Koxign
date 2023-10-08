@@ -16,8 +16,8 @@ public class PartnerServiceImpl implements PartnerService {
 	@Autowired
 	private PartnerMapper partenerMapper;
 	
-	@Autowired
-	private PasswordEncoder passwordEncoder;
+//	@Autowired
+//	private PasswordEncoder passwordEncoder;
 	
 	   //회원 ID찾기
 		public PartnerVO findpartnerEmail(PartnerVO vo) throws Exception{
@@ -31,10 +31,10 @@ public class PartnerServiceImpl implements PartnerService {
 	   
 		//회원비밀번호업데이트
 		public void partnerPwdUpdate(PartnerVO vo) throws Exception{
-			//입력한 비밀번호를 암호화한다
-			String encodedPassword = passwordEncoder.encode(vo.getPartnerPwd());			
-			vo.setPartnerPwd(encodedPassword);
-			
+//			//입력한 비밀번호를 암호화한다
+//			String encodedPassword = passwordEncoder.encode(vo.getPartnerPwd());			
+//			vo.setPartnerPwd(encodedPassword);
+//			
 			partenerMapper.partnerPwdUpdate(vo);
 		}
 		

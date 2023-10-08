@@ -5,12 +5,11 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.util.StringUtils;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import koxign.join.service.JoinVO;
 import koxign.login.service.LoginService;
 import koxign.login.service.LoginVO;
  
@@ -25,14 +24,14 @@ public class LoginController {
     
     
     // 01. 로그인 화면
-    @GetMapping("/main/login.do")
+    @GetMapping("/login/login.do")
     public String login(){
         return "/login/Login";    // views/login/Login.jsp로 포워드
     }
     
     //02. 로그인 처리
     
-    @PostMapping("/login/actionLogin.do")
+    @PostMapping("/login/actionlogin.do")
 	public String actionLogin(@ModelAttribute LoginVO vo, HttpServletRequest request, ModelMap model) throws Exception {
     	
 //    //SNS 로그인
@@ -55,7 +54,7 @@ public class LoginController {
 		return "redirect:/main";
 	} else {
 		model.addAttribute("loginMessage","로그인 정보가 올바르지않습니다"); //로그인 정보가 올바르지 않습니다.
-		return "redirect:/login/login";
+		return "redirect:/login.Login";
 	}
 	
 }

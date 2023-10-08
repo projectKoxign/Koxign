@@ -2,7 +2,7 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <!-- koxign.login.service.impl.LoginMapper.xml -->
-<mapper namespace="koxign.login.service.impl.LoginMapper">
+<mapper namespace="loginMapper">
    
 <!--로그인 처리를 위한 resultMap  -->   
    <resultMap id="login" type="koxign/login/service/LoginVO">
