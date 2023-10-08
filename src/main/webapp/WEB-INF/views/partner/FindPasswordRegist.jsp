@@ -43,5 +43,21 @@
 		</fieldset>
 	</form>
 </div>	
+
+<script>
+function checkForm(){
+	if(!$("#password").val()){
+		alert("비밀번호를 입력해주세요.");
+		return false;
+	}else if(!$("#password2").val()){
+		alert("비밀번호 확인을 입력해주세요.");
+		return false;
+	}else if($("#password").val() != $("#password2").val()){
+		alert("비밀번호와 비밀번호 확인 정보가 다릅니다.");
+		return false;
+	}
+}
+	
+</script>
 </body>
 </html>

@@ -36,5 +36,19 @@
 		</fieldset>
 	</form>
 </div>
+
+<script>
+<c:if test="${not empty message}">
+	alert("${message}");
+</c:if>	
+
+function checkForm(){
+	if(!$("#userNm").val()){
+		alert("회원명을 입력해주세요.");
+		return false;
+	}
+}
+	
+</script>
 </body>
 </html>

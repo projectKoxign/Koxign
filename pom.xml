@@ -225,6 +225,13 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
+           <!-- pom.xml오류로 새로넣은것 -->
+		        <plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-war-plugin</artifactId>
+					<version>3.3.2</version>
+				</plugin>
+			<!-- 새로넣은것 끝 -->
         </plugins>
     </build>
 </project>
