@@ -16,56 +16,74 @@ public class PartnerVO {
 	private String partnerCo;
 	
 	//사용자상태코드
-	private String partnerUseAt;
+	private String partnerSttusCode;
 	
 	//회원고유번호
 	private int partnerNo;
 	
 	//가입일자
-	private Date partnerCreatAt;
+	private java.util.Date partnerCreatAt;
 	
 	//getter&setter
 	public String getPartnerEmail() {
 		return partnerEmail;
 	}
+
 	public void setPartnerEmail(String partnerEmail) {
 		this.partnerEmail = partnerEmail;
 	}
+
 	public String getPartnerNm() {
 		return partnerNm;
 	}
+
 	public void setPartnerNm(String partnerNm) {
 		this.partnerNm = partnerNm;
 	}
+
 	public String getPartnerPwd() {
 		return partnerPwd;
 	}
+
 	public void setPartnerPwd(String partnerPwd) {
 		this.partnerPwd = partnerPwd;
 	}
+
 	public String getPartnerCo() {
 		return partnerCo;
 	}
+
 	public void setPartnerCo(String partnerCo) {
 		this.partnerCo = partnerCo;
 	}
-	public String getPartnerUseAt() {
-		return partnerUseAt;
+
+	public String getPartnerSttusCode() {
+		return partnerSttusCode;
 	}
-	public void setPartnerUseAt(String partnerUseAt) {
-		this.partnerUseAt = partnerUseAt;
+
+	public void setPartnerSttusCode(String partnerSttusCode) {
+		this.partnerSttusCode = partnerSttusCode;
 	}
+
 	public int getPartnerNo() {
 		return partnerNo;
 	}
+
 	public void setPartnerNo(int partnerNo) {
 		this.partnerNo = partnerNo;
 	}
-	public Date getPartnerCreatAt() {
+
+	public java.util.Date getPartnerCreatAt() {
 		return partnerCreatAt;
 	}
-	public void setPartnerCreatAt(Date partnerCreatAt) {
+
+	public void setPartnerCreatAt(java.util.Date partnerCreatAt) {
 		this.partnerCreatAt = partnerCreatAt;
 	}
 	
+	
+
+
+	
+
 }

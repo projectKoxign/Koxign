@@ -22,10 +22,22 @@
    </resultMap>
    
    <resultMap id="findPassword" type="koxign/partner/service/PartnerVO">  
-   <result property="partnerNo" column="partner_Nm" />
+   <result property="partnerNo" column="partner_No" />
    <result property="partnerEmail" column="partner_Email" />
    <result property="partnerNm" column="partner_Nm" />
    </resultMap>
+   
+   <select id="findId" resultMap="findId">
+	   	SELECT partner_no
+			,partner_email
+			,partner_nm 
+		FROM tbl_partner
+		WHERE partner_sttus_code = 'Y' 
+			  AND partner_nm = #{partnerNm}
+			  AND partner_co = #{partnerCo}
+		ORDER BY partner_create_at DESC
+		LIMIT 1
+   </select>
    
    
  

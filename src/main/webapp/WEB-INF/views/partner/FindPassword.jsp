@@ -20,12 +20,12 @@
 			<legend>아이디찾기 폼</legend>
 			<div class="change_inp">
 				<div>
-					<label for="userNm">회원명</label>
-					<input type="text" name="partnerNm" class="inp" id="partnerNm"/>
-				</div>
-				<div>
 					<label for="partnerEmail">아이디</label>
 					<input type="text" name="partnerEmail" class="inp" id="partnerEmail"/>
+				</div>
+				<div>
+					<label for="userNm">회원명</label>
+					<input type="text" name="partnerNm" class="inp" id="partnerNm"/>
 				</div>
 				
 			</div>
