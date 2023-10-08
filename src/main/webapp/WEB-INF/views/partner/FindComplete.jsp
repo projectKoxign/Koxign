@@ -22,5 +22,14 @@
 		<a href="/login/login.do" class="btn">로그인</a>
 	</div>
 </div>
+
+<script>
+function checkForm(){
+	if(!$("#userNm").val()){
+		alert("회원명을 입력해주세요.");
+		return false;
+	}
+}
+</script>
 </body>
 </html>

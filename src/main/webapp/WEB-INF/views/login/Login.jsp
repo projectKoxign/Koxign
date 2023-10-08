@@ -27,7 +27,7 @@
 			</div>
 			
 			<div>
-				<button id="login">로그인</button>
+				<button type="button" id="login">로그인</button>
 				<button id="partner">아이디찾기</button>				
 				<button id="partner">비밀번호찾기</button>				
 				<a href="/main"><button type="button">처음으로</button></a>

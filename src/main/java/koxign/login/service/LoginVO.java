@@ -8,6 +8,7 @@ public class LoginVO {
 	private String partnerCo;
 	private String partnerPhone;
 	private String partnerAddr;
+	private String loginType;
 	
 	
 	public String getPartnerEmail() {
@@ -46,6 +47,13 @@ public class LoginVO {
 	public void setPartnerAddr(String partnerAddr) {
 		this.partnerAddr = partnerAddr;
 	}
+	public String getLoginType() {
+		return loginType;
+	}
+	public void setLoginType(String loginType) {
+		this.loginType = loginType;
+	}
+	
 	
 	
 }

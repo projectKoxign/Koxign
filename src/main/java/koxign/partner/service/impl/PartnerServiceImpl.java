@@ -21,12 +21,12 @@ public class PartnerServiceImpl implements PartnerService {
 	
 	   //회원 ID찾기
 		public PartnerVO findpartnerEmail(PartnerVO vo) throws Exception{
-		   return findpartnerEmail(vo);
+		   return partenerMapper.findpartnerEmail(vo);
 	   }
 	   
 	   //회원비밀번호 찾기
 		public PartnerVO findpartnerPwd(PartnerVO vo) throws Exception{
-		   return findpartnerPwd(vo);
+		   return partenerMapper.findpartnerPwd(vo);
 	   }
 	   
 		//회원비밀번호업데이트
@@ -35,23 +35,23 @@ public class PartnerServiceImpl implements PartnerService {
 			String encodedPassword = passwordEncoder.encode(vo.getPartnerPwd());			
 			vo.setPartnerPwd(encodedPassword);
 			
-			partnerPwdUpdate(vo);
+			partenerMapper.partnerPwdUpdate(vo);
 		}
 		
 		//회원목록
 		public List selectpartnerList(PartnerVO vo) throws Exception{
-			return selectpartnerList(vo);
+			return partenerMapper.selectpartnerList(vo);
 		}
 		
 			
 		//회원목록 수
 		public int selectPartnerListCnt (PartnerVO vo) throws Exception{
-			return selectPartnerListCnt(vo);
+			return partenerMapper.selectPartnerListCnt(vo);
 		}
 		
 		//회원상세
 		public ModelMap selectpartner (PartnerVO vo) throws Exception{
-			return selectpartner(vo);
+			return partenerMapper.selectpartner(vo);
 		}
 
 }

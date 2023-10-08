@@ -6,7 +6,10 @@
 	   <typeAliases>
         <!-- LoginMapper 인터페이스에 대한 별칭 -->
         <typeAlias type="koxign.login.service.impl.LoginMapper" alias="loginMapper" />
+
         <typeAlias type="koxign.join.service.impl.JoinMapper" alias="joinMapper" />
+
+		<typeAlias type="koxign.partner.service.impl.PartnerServiceImpl" alias="partnerMapper"/>
 
 		</typeAliases>
 	
