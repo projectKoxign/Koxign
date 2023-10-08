@@ -19,7 +19,7 @@
 			<legend>아이디찾기 폼</legend>
 			<div class="change_inp">
 				<div>
-					<label for="userNm">회원명</label>
+					<label for="partnerNm">회원명</label>
 					<input type="text" name="partnerNm" class="inp" id="partnerNm"/>
 				</div>
 				<div>
@@ -40,7 +40,7 @@
 	alert("${message}");
 </c:if>	
 function checkForm(){
-	if(!$("#userNm").val()){
+	if(!$("#partnerNm").val()){
 		alert("회원명을 입력해주세요.");
 		return false;
 	}

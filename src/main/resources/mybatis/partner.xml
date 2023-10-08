@@ -15,22 +15,24 @@
 <!-- 여러 열을 개체의 속성에 매핑해야 하거나 사용자 지정 매핑 논리를 수행해야 하는 경우와 같이 쿼리 결과가 더 복잡할 때 사용됩니다. -->
 <!-- 매핑 프로세스에 대한 더 많은 유연성과 제어 기능을 제공합니다  -->
 
-   <resultMap id="findId" type="koxign/partner/service/PartnerVO">  
+   <resultMap id="findpartnerEmail" type="koxign.partner.service.PartnerVO">  
    <result property="partnerEmail" column="partner_Email" />
    <result property="partnerNo" column="partner_No" />
    <result property="partnerNm" column="partner_Nm" />
    </resultMap>
    
-   <resultMap id="findPassword" type="koxign/partner/service/PartnerVO">  
+   <resultMap id="findpartnerPwd" type="koxign.partner.service.PartnerVO">  
    <result property="partnerNo" column="partner_No" />
    <result property="partnerEmail" column="partner_Email" />
    <result property="partnerNm" column="partner_Nm" />
    </resultMap>
    
-   <select id="findId" resultMap="findId">
+
+   <select id="findpartnerEmail" resultMap="findpartnerEmail">
 	   	SELECT partner_no
 			,partner_email
 			,partner_nm 
+			,partner_co
 		FROM tbl_partner
 		WHERE partner_sttus_code = 'Y' 
 			  AND partner_nm = #{partnerNm}
@@ -39,6 +41,54 @@
 		LIMIT 1
    </select>
    
+   <select id="findpartnerPwd" resultMap="findpartnerPwd">
+	   SELECT partner_no
+			,partner_email
+			,partner_nm  
+			,partner_co
+		FROM tbl_partner
+		WHERE partner_sttus_code = 'Y' 
+		  	AND partner_email = 'test'
+		  	AND partner_nm = 'test'
+		  	AND partner_co IS NULL
+		ORDER BY partner_create_at DESC 
+		LIMIT 1
+   </select>
    
- 
+   <select id="partnerPwdUpdate">
+   UPDATE tbl_partner SET 
+	   	  partner_pwd = #{partnerPwd}
+   WHERE  partner_no  = #{partnerNo} 
+   </select>
+   
+   <select id="selectpartnerList" resultType="ModelMap">
+   	SELECT partner_no
+		,partner_email
+		,partner_nm  
+		,partner_co
+		,partner_create_at 
+	FROM tbl_partner
+	WHERE partner_sttus_code = 'Y' 
+	ORDER BY partner_create_at DESC
+	LIMIT #{recordCountPerPage} OFFSET #{firstIndex}   
+   </select>
+   
+   <select id="selectPartnerListCnt" resultType="java.langlInteger">
+   SELECT 
+		COUNT(*) cnt
+	FROM tbl_partner
+	WHERE partner_sttus_code = 'Y'
+   </select>
+   
+   <select id="selectpartner" resultType="ModelMap">
+   SELECT 
+		partner_no
+		,partner_email
+		,partner_nm  
+		,partner_co
+		,partner_create_at 
+	FROM tbl_partner 
+	WHERE partner_email = 'test'
+	AND partner_sttus_code = 'Y';
+   </select>
 </mapper>

@@ -18,14 +18,14 @@
 		<c:out value="${result.partnerNm}"/>님의 아이디는<em><c:out value="${result.partnerEmail}"/></em>입니다.<br />
 	</p>
 	<div class="btn-cont">
-		<a href="/member/findPassword.do" class="btn spot btn_chpw">비밀번호찾기</a>
+		<a href="/partner/findPassword.do" class="btn spot btn_chpw">비밀번호찾기</a>
 		<a href="/login/login.do" class="btn">로그인</a>
 	</div>
 </div>
 
 <script>
 function checkForm(){
-	if(!$("#userNm").val()){
+	if(!$("#partnerNm").val()){
 		alert("회원명을 입력해주세요.");
 		return false;
 	}

@@ -16,8 +16,8 @@
 	<form id="passwordCnfirm" name="frm" action="/member/findPasswordComplete.do" method="post" onsubmit="return checkForm(this)" >
 		<fieldset>
 			<legend>비밀번호 변경 폼</legend>
-			<input type="hidden" name="esntlId" value="${result.esntlId}"/>
-			<input type="hidden" name="emplyrId" value="${result.emplyrId}"/>
+			<input type="hidden" name="partnerNo" value="${result.partnerNo}"/>
+			<input type="hidden" name="partnerEmail" value="${result.partnerEmail}"/>
 			<div class="change_intro">
 				<cite><span>TIP</span>보안에 취약한 비밀번호는 사용하지 마세요!</cite>
 				<p>
