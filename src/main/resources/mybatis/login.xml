@@ -13,6 +13,23 @@
    <result property="partnerCo" column="partner_Co" />
    <result property="partnerPhone" column="partner_Phone" />
    <result property="partnerAddr" column="partner_Addrs" />
+   <result property="loginType" column="loginType" />
    </resultMap>
+   
+   <!--일반 로그인  -->
+   <select id="actionLogin" resultMap="login">
+   	SELECT PARTNER_EMAIL
+   		,PARTNER_NM
+   		,PARTNER_PWD
+   		,PARTNER_CO
+   		,PARTNER_PHONE
+   		,PARTNER_ADDRS
+   		,LOGINTYPE
+   	FROM TBL_PARTNER
+   	WHERE PARTNER_EMAIL = #{partnerEmail}
+   		AND PARTNER_PWD =#{partnerPwd}
+   		AND PARTNER_STTUS_CODE = 'P' 	   
+   </select>
+   
  
 </mapper>
